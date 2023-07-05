@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/3e134c0aa2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <div>
+            <i class="fa-solid fa-s"></i>
+            <i class="fa-solid fa-p"></i>
+          </div>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Web Developer</p>
+          <h1>
+            Hi, I'm <span>Sudhanshu</span><br />
+            from India
+          </h1>
+        </div>
+        <div class="icons">
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+      </div>
+    </div>
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="./images/user.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here,
+              content here', making it look like readable English. Many desktop
+              publishing packages and web page editors now use Lorem Ipsum as
+              their default model text, and a search for 'lorem ipsum' will
+              uncover many web sites still in their infancy.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="showContent('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="showContent('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="showContent('education')">
+                Education
+              </p>
+            </div>
+
+            <div class="tab-contents active-content" id="skills">
+              <ul>
+                <li>
+                  <span>Frontend Development</span><br />HTML, CSS, JS,
+                  React.JS, Next.JS, Bootstrap
+                </li>
+                <li>
+                  <span>Backend Development</span><br />Node.JS, Express.JS,
+                  RESTAPI, Error Handling, Security
+                </li>
+                <li><span>Database</span><br />MongoDB, SQL, Firebase</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>fghhjgfhjgfj</span><br />dshfsfjjyfhjghfd
+                </li>
+                <li>
+                  <span>gfhfghfgjfg</span><br />gfjdjhfjfgdjfdgjdfjfd
+                <li><span>djjjfdj</span><br />djfjdfsjjfjfj</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span
+                    >Heritage Institute of Technology, Kolkata (2019-2023)</span
+                  ><br />
+                  B.Tech, Information Technology
+                </li>
+                <li>
+                  <span
+                    >Pt. B. P. Saraswati Vidya Mandir, Dugda, Bokaro (2016-2018)</span
+                  ><br />Higher Secondary
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <div class="sub-title">My Services</div>
+            <div class="services-list">
+                <ul>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      var allTitle = document.getElementsByClassName('tab-links');
+      var allTiles = document.getElementsByClassName('tab-contents');
+
+      function showContent(tabname) {
+        for (const title of allTitle) {
+          title.classList.remove('active-link');
+        }
+        for (const tile of allTiles) {
+          tile.classList.remove('active-content');
+        }
+        console.log(allTitle);
+        console.log(allTiles);
+        event.currentTarget.classList.add('active-link');
+        document.getElementById(tabname).classList.add('active-content');
+      }
+    </script>
+  </body>
+</html>
