@@ -23,13 +23,18 @@
               <i class="nav-icon fa-solid fa-s"></i>
               <i class="nav-icon fa-solid fa-p"></i>
             </div>
-            <ul>
+            
+            
+              
+            <ul class="menu">
+              <i class="fa-solid fa-x" onclick="hideMenu()"></i>
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
           </nav>
         </div>
       </div>
@@ -292,6 +297,15 @@
         console.log(allTiles);
         event.currentTarget.classList.add('active-link');
         document.getElementById(tabname).classList.add('active-content');
+      }
+    </script>
+
+    <script>
+      function showMenu(){
+        document.getElementsByClassName('menu')[0].classList.add('show-menu');
+      }
+      function hideMenu(){
+        document.getElementsByClassName('menu')[0].classList.remove('show-menu');
       }
     </script>
   </body>
