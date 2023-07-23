@@ -400,10 +400,23 @@ form .btn2{
   color: #0ef;
 }
 
+.menu i{
+  display: none;
+}
+
+#navbar .fa-bars{
+  display: none;
+}
+
 @media only screen and (max-width: 600px) {
-  .fa-bars{
+  #navbar .fa-bars{
+    display: block;
     font-size: 40px;
     color: #0ef;
+  }
+
+  .menu i{
+    display: block;
   }
 
   #navbar{
@@ -432,5 +445,34 @@ form .btn2{
 
   .show-menu{
     right: 0;
+  }
+
+  .home-text p{
+    font-size: 18px;
+  }
+
+  .home-text h1{
+    font-size: 24px;
+    margin-top: 8px;
+  }
+
+  .sub-title{
+    font-size: 30px;
+  }
+
+  #about .row{
+    flex-direction: column;
+  }
+
+  .services-list{
+    margin-top: 30px;
+  }
+
+  .work-list{
+    margin-top: 30px;
+  }
+
+  #contact .row{
+    flex-direction: column;
   }
 }
